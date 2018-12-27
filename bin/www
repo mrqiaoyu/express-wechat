@@ -8,6 +8,8 @@ var app = require('../app');
 var debug = require('debug')('express-wechat:server');
 var http = require('http');
 
+let log = require("../utils/u").log;
+
 /**
  * Get port from environment and store in Express.
  */
@@ -86,5 +88,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  log.info('Listening on ' + bind);
 }

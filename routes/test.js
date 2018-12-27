@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+let utils = require("../utils/u");
+let log = utils.log;
+let wx = utils.wx;
+
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send("access_token: " + wx.access_token);
 });
 
 module.exports = router;
